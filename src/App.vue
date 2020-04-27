@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <div class="mg"></div>
+
+    <lwm-aa>
+      <div>这里用这个权限组件搞一下</div>
+    </lwm-aa>
+    <div class="mg"></div>
+    <lwm-bb></lwm-bb>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import a from "./components/a.vue";
+import b from "./components/b.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    "lwm-aa": a,
+    "lwm-bb": b,
+  },
+};
 </script>
 
 <style>
@@ -24,5 +32,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.mg {
+  margin: 15px 0;
 }
 </style>
